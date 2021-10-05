@@ -1,0 +1,177 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+    font-family: 'Inter', sans-serif;
+
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  width: 100rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.text {
+  padding: 7rem 6rem;
+  display: grid;
+  gap: 2.4rem;
+}
+
+.text h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3.2rem;
+}
+
+.text p {
+  line-height: 1.8;
+}
+
+.text span {
+  color: hsl(277, 64%, 61%);
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.4rem;
+}
+
+.num {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.text-num {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.6) !important;
+}
+
+.img {
+  background: linear-gradient(
+      hsla(277, 64%, 61%, 0.6),
+      hsla(277, 64%, 61%, 0.6)
+    ),
+    url(../images/image-header-desktop.jpg);
+  background-size: cover;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: cover;
+}
+.attribution a {
+  color: hsl(277, 64%, 61%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 40em) {
+  .container {
+    background-color: hsl(244, 38%, 16%);
+    width: 32.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .img {
+    height: 24rem;
+    grid-row: 1;
+    background-size: cover;
+  }
+
+  .text {
+    padding: 4rem 3rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 2.8rem;
+  }
+
+  .text span {
+    color: hsl(277, 64%, 61%);
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .num {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+  }
+}
